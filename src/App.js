@@ -11,11 +11,7 @@ class App extends Component {
      <BrowserRouter>
          <Routes>
            <Route path="/" element={ <SignIn/> }> </Route>
-             <Route exact path={ constants.SIGN_UP_URL } element={ <SignUp/> }> </Route>
-
              <Route exact path={ constants.SIGN_UP_END_URL + "/:userId" } element={ <SignUpEndWrapper/> }> </Route>
-
-             <Route exact path={ constants.SIGN_IN_URL } element={ <SignIn/> }> </Route>
          </Routes>
       </BrowserRouter>
     );

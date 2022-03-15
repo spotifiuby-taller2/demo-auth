@@ -8,7 +8,6 @@ const USERS_HOST = process.env
 
 /* Backends paths */
 const SIGN_UP_URL = "/signup";
-const SIGN_IN_URL = "/signin";
 const SIGN_UP_END_URL = SIGN_UP_URL + "/end";
 
 const JSON_HEADER = {
