@@ -20,7 +20,7 @@ const postTo = (url, body, f) => {
   ).then(f);
 } */
 
-const getTo = (url, f) => {
+function getTo(url, f) {
   fetch(url, {
         method: "GET",
         headers: constants.JSON_HEADER,

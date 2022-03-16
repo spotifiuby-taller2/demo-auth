@@ -17,7 +17,6 @@ const JSON_HEADER = {
 module.exports = {
   USERS_HOST,
   SIGN_UP_URL,
-  SIGN_IN_URL,
   JSON_HEADER,
   SIGN_UP_END_URL
 }

@@ -21,11 +21,11 @@ class SignUpEnd extends Component {
               + "/"
               + userId,
             (response) => {
-                alert("Cuenta confirmada");
+                alert("Cuenta confirmada. Por favor volver a la app.");
 
                 this.props
                     .navigate(constants.SIGN_IN_URL);
-            } );
+            } )
     }
 
     render() {
