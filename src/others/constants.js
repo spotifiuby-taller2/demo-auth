@@ -9,6 +9,7 @@ const USERS_HOST = process.env
 /* Backends paths */
 const SIGN_UP_URL = "/signup";
 const SIGN_UP_END_URL = SIGN_UP_URL + "/end";
+const FORGOT_PASSWORD_URL = "/forgotpassword"
 
 const JSON_HEADER = {
   'Content-Type': 'application/json'
@@ -18,5 +19,6 @@ module.exports = {
   USERS_HOST,
   SIGN_UP_URL,
   JSON_HEADER,
-  SIGN_UP_END_URL
+  SIGN_UP_END_URL,
+  FORGOT_PASSWORD_URL
 }
