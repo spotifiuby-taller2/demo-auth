@@ -27,6 +27,7 @@ class SignUpEnd extends Component {
 
                 else {
                     alert("Cuenta confirmada. Por favor volver a la app.");
+                    window.close();
                 }
             } )
     }
@@ -39,7 +40,7 @@ class SignUpEnd extends Component {
                         <Typography component="h1"
                                     variant="h5"
                                     align={"center"}
-                        >
+                        >Un momento por favor...
                         </Typography>
                 </Container>
             </ThemeProvider>
