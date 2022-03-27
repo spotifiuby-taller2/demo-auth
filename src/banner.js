@@ -1,6 +1,6 @@
 import {
     Box,
-    Container,
+    Container, createTheme,
     CssBaseline,
     Paper,
 } from "@mui/material";
@@ -11,6 +11,12 @@ import logo from "./media/hexagon.png";
 import { Component } from "react";
 
 class Banner extends Component {
+    constructor(props) {
+        super(props);
+
+        this.theme = createTheme();
+    }
+
     render() {
         return (
 
