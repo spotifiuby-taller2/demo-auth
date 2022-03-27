@@ -40,6 +40,12 @@ import {
       const requestBody = {
         password: getSHAOf( getSHAOf( password ) )
       }
+
+
+      if (password.length < constants.PASSWORD_MIN_LEN) {
+            alert("La contraseña debe tener al menos 10 caracteres;");
+            return;
+      }
   
       const userId = window.location
                             .href
