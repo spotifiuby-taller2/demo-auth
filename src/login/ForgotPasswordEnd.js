@@ -14,7 +14,7 @@ import {
   
   const ForgotPasswordEnd = () => {
 
-    const [theme] = useState( createTheme() );
+    const [theme] = createTheme();
   
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
