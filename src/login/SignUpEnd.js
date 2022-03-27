@@ -21,10 +21,13 @@ class SignUpEnd extends Component {
               + "/"
               + userId,
             (response) => {
-                alert("Cuenta confirmada. Por favor volver a la app.");
+                if(response.error) {
+                    alert(response.error);
+                }
 
-                this.props
-                    .navigate(constants.SIGN_IN_URL);
+                else {
+                    alert("Cuenta confirmada. Por favor volver a la app.");
+                }
             } )
     }
 
@@ -36,7 +39,7 @@ class SignUpEnd extends Component {
                         <Typography component="h1"
                                     variant="h5"
                                     align={"center"}
-                        > Un momento por favor...
+                        >
                         </Typography>
                 </Container>
             </ThemeProvider>
