@@ -16,6 +16,8 @@ class SignUpEnd extends Component {
                              .href
                              .split(constants.SIGN_UP_END_URL + "/")[1];
 
+        console.log(userId);
+
         getTo(constants.USERS_HOST
               + constants.SIGN_UP_END_URL
               + "/"
