@@ -2,7 +2,7 @@ import {Component} from 'react';
 import {ThemeProvider} from "@emotion/react";
 import {Container, createTheme, CssBaseline, Typography} from "@mui/material";
 import constants from "../others/constants";
-import {getTo} from "../others/utils";
+import {getToGateway} from "../others/utils";
 
 class SignUpEnd extends Component {
     constructor(props) {
@@ -16,11 +16,10 @@ class SignUpEnd extends Component {
                              .href
                              .split(constants.SIGN_UP_END_URL + "/")[1];
 
-        getTo(constants.USERS_HOST
+        getToGateway(constants.USERS_HOST
               + constants.SIGN_UP_END_URL
               + "/"
-              + userId,
-            (response) => {
+              + userId, "").then( (response) => {
                 if(response.error) {
                     alert(response.error);
                 }
@@ -29,7 +28,8 @@ class SignUpEnd extends Component {
                     alert("Cuenta confirmada. Por favor volver a la app.");
                     window.close();
                 }
-            } )
+                }
+            );
     }
 
     render() {

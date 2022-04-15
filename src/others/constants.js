@@ -11,6 +11,16 @@ const SIGN_UP_URL = "/signup";
 const SIGN_UP_END_URL = SIGN_UP_URL + "/end";
 const FORGOT_PASSWORD_URL = "/forgotpassword"
 
+const REDIRECT_URL = "/redirect";
+
+const API_KEY_URL = "/apikeys";
+const API_KEY_DOWN_URL = API_KEY_URL + "/down";
+const API_KEY_UP_URL = API_KEY_URL + "/up";
+const API_KEY_QUERY_PARAM = "apiKey=";
+const USER_ID_QUERY_PARAM = "userId=";
+
+const MY_API_KEY = "735e4fd4ce022f775285b8760cd053388bba04e926a5987585f89fb8f21b235f";
+
 const JSON_HEADER = {
   'Content-Type': 'application/json'
 }

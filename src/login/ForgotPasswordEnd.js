@@ -8,7 +8,7 @@ import {
   } from "@mui/material";
   import { ThemeProvider } from "@emotion/react";
   import { loginStyles } from "../style/signin/SignIn";
-  import { getSHAOf } from "../others/utils";
+  import {getSHAOf, postToGateway} from "../others/utils";
   import constants from "../others/constants";
   import React, { useState } from "react";
   
@@ -36,11 +36,6 @@ import {
           setPasswordErr("No coincide con la contraseña ingresada");
           return;
       }
-    
-      const requestBody = {
-        password: getSHAOf( getSHAOf( password ) )
-      }
-
 
       if (password.length < constants.PASSWORD_MIN_LEN) {
             alert("La contraseña debe tener al menos 10 caracteres;");
@@ -50,15 +45,17 @@ import {
       const userId = window.location
                             .href
                             .split(constants.FORGOT_PASSWORD_URL + "/")[1];
-  
-      fetch(constants.USERS_HOST + constants.FORGOT_PASSWORD_URL
-            + "/"
-            + userId, {
-          method: "POST",
-          headers: constants.JSON_HEADER,
-          body: JSON.stringify(requestBody)
+
+        const requestBody = {
+            password: getSHAOf( getSHAOf( password ) ),
+
+            redirectTo: constants.USERS_HOST + constants.FORGOT_PASSWORD_URL
+                                             + "/"
+                                             + userId
         }
-      ).then(response => response.json())
+
+      postToGateway(requestBody)
+        .then(response => response.json())
         .then(response => {
             if (response.error !== undefined) {
               alert(response.error);
