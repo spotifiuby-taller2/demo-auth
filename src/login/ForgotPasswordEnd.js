@@ -55,7 +55,6 @@ import {
         }
 
       postToGateway(requestBody)
-        .then(response => response.json())
         .then(response => {
             if (response.error !== undefined) {
               alert(response.error);

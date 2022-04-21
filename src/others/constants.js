@@ -6,6 +6,10 @@ require('dotenv').config();
 const USERS_HOST = process.env
                           .REACT_APP_USERS_HOST;
 
+const SERVICES_HOST = process.env
+                             .REACT_APP_SERVICES_HOST;
+
+
 /* Backends paths */
 const SIGN_UP_URL = "/signup";
 const SIGN_UP_END_URL = SIGN_UP_URL + "/end";
@@ -39,5 +43,6 @@ module.exports = {
   API_KEY_UP_URL,
   REDIRECT_URL,
   USER_ID_QUERY_PARAM,
-  MY_API_KEY
+  MY_API_KEY,
+  SERVICES_HOST
 }

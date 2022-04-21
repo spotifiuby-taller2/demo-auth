@@ -23,6 +23,7 @@ const postTo = (url, body, f) => {
 const postToGateway = (body) => {
     body.verbRedirect = "POST";
     body.apiKey = constants.MY_API_KEY;
+    console.log(constants.SERVICES_HOST + constants.REDIRECT_URL);
 
     return fetch(constants.SERVICES_HOST + constants.REDIRECT_URL, {
             method: "POST",
